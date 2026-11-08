@@ -1,0 +1,60 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>How to Plan an AI Agent Pilot for a Small Business</title><meta name="description" content="Scope one AI agent pilot, define expected output and test stop conditions. A worked example uses the One Agent Stack PDF and opt-in page."><link rel="canonical" href="https://maxmaxrouge-rgb.github.io/agent-pilot-kit/how-to-plan-ai-agent-pilot.html">
+<meta property="og:type" content="article"><meta property="og:site_name" content="One Agent Stack"><meta property="og:title" content="How to Plan an AI Agent Pilot for a Small Business"><meta property="og:description" content="Scope one AI agent pilot, define expected output and test stop conditions. A worked example uses the One Agent Stack PDF and opt-in page."><meta property="og:url" content="https://maxmaxrouge-rgb.github.io/agent-pilot-kit/how-to-plan-ai-agent-pilot.html"><meta property="og:image" content="https://maxmaxrouge-rgb.github.io/agent-pilot-kit/social-preview.png"><meta property="og:image:alt" content="One Agent Stack free guide and pilot templates"><style>body{font:18px/1.65 system-ui,sans-serif;max-width:760px;margin:auto;padding:32px 20px;color:#182f38;background:#faf8f2}h1{font-size:clamp(32px,6vw,46px);line-height:1.15}h2{line-height:1.25;margin-top:40px}a{color:#175746}pre{font:14px/1.6 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;padding:20px;background:#e6eee7}table{border-collapse:collapse;width:100%;font-size:16px}td,th{text-align:left;padding:12px;border:1px solid #b5c9bf}.note,footer{font-size:14px;color:#405c52}footer{border-top:1px solid #b5c9bf;margin-top:40px;padding-top:20px}.button{display:inline-block;padding:12px 20px;background:#175746;color:white}</style></head><body><main><nav><a href="index.html">Free guide</a> · <a href="offer.html">Pilot Kit</a></nav>
+<h1>How to plan an AI agent pilot for a small business</h1>
+<p>Start with one job whose output you can check. Write the input, expected result and approval limits before testing it.</p>
+<p class="note">Inferred method: the procedure and fictional pilot below are suggested planning steps. They are not a tested deployment.</p>
+<h2>Choose a job with a clear end</h2>
+<p>Pick one repeatable task. Keep work that needs judgment with its current owner. Avoid a first pilot that sends messages or changes accounts.</p>
+<p>For this example, the job is to draft a link-check note for a resource page. The owner reviews the note before changing anything.</p>
+<p class="note">Verified, fetched source: the <a href="one-agent-stack.pdf">free One Agent Stack PDF</a> starts with a tool audit. Steps 4–6 choose one repeatable job with a checkable result. Steps 9–12 set approval limits and start with read-only work.</p>
+<h2>Write a pilot brief before choosing tools</h2>
+<p>Copy this fictional brief into a text file. Replace the sample scope with your own approved task.</p>
+<pre>Job: Draft a resource-page check note.
+Owner: The person responsible for the page.
+Input: An approved public page and its linked PDF and offer.
+Output: A Markdown note listing each URL, HTTP status,
+        page observations and any checks still needed.
+Allowed: Read the approved public URLs and write a local draft.
+Approval required: Every site edit or outbound message.
+Stop: Login, challenge, 403, rate limit or unapproved URL.
+Finish: Owner compares the note with the source pages.</pre>
+<p>Keep the first input small. Use public or fictional material. Keep client records and credentials out of this exercise.</p>
+<h2>Use the PDF and opt-in page as the worked example</h2>
+<p class="note">Verified, fetched URL on 9 November 2026: the <a href="index.html">free-guide opt-in page</a> offers a direct PDF download. Its email field and signup button are disabled. Email signup is marked coming soon.</p>
+<p>Give the pilot these approved inputs:</p>
+<ul><li><a href="index.html">The free-guide page</a>, to inspect the download and signup state.</li>
+<li><a href="one-agent-stack.pdf">The kit's free PDF guide</a>, to confirm the download returns a PDF.</li>
+<li><a href="offer.html">The Pilot Kit offer</a>, to inspect the request route and availability text.</li></ul>
+<p>Ask for a note that separates fetched facts from assumptions. A download check must not become a claim that email signup works.</p>
+<p>Use this expected-output pattern. Fill each status from a fresh GET during your test.</p>
+<pre>Resource-page check
+Free-guide page: [URL] / [HTTP status]
+PDF guide: [URL] / [HTTP status and content type]
+Offer page: [URL] / [HTTP status]
+Signup state: [observed text and disabled controls]
+Request route: [observed link; form submission not tested]
+Untested: Email delivery, payment and paid delivery.
+Next draft: [one proposed correction, or none]</pre>
+<p class="note">Verified, fetched URL: the offer links to a public GitHub request form. It says sales are not open. This example does not submit that form.</p>
+<h2>Define pass and stop conditions</h2>
+<p>Before running the pilot, write the checks you will apply to its output.</p>
+<table><thead><tr><th>Check</th><th>Pass condition for this example</th></tr></thead><tbody>
+<tr><td>Scope</td><td>The note covers only the approved page, PDF and offer.</td></tr>
+<tr><td>Evidence</td><td>Every reported HTTP status comes from a recorded GET.</td></tr>
+<tr><td>Accuracy</td><td>The note records disabled signup and does not claim email delivery works.</td></tr>
+<tr><td>Approval</td><td>The run produces a local draft without publishing changes or submitting forms.</td></tr>
+<tr><td>Stop handling</td><td>A challenge or restricted response appears as an untested item, without a bypass.</td></tr>
+</tbody></table>
+<p>Test a failure case with fictional input: replace one link with a missing resource. Check that the draft records the failure.</p>
+<p>Test an instruction to submit a form. Check that the pilot stops for approval under the brief.</p>
+<h2>Keep the first run manual</h2>
+<p>Compare each line with the source. Record the input, instruction version, output and your pass or fail decision.</p>
+<p>If the draft invents a status, tighten the evidence rule. Repeat the same input before expanding the scope.</p>
+<p class="note">Verified, fetched source: PDF step 29 calls for a manual test before scheduling, a run log and a stop method. Inferred: these checks are a starting test plan, not proof of production readiness.</p>
+<h2>Use worksheets when you want a reusable record</h2>
+<p class="note">Verified, fetched offer: the planned <a href="offer.html">One Agent Stack Pilot Kit</a> lists CSV worksheets, a Markdown brief and an instruction template. It also lists approval instructions and a test log.</p>
+<p>Use the free PDF to choose the job. Use this example to write a first brief. Review the offer if you want the planned editable templates.</p>
+<p><a class="button" href="offer.html">View the Pilot Kit offer</a></p>
+<p><a href="https://github.com/maxmaxrouge-rgb/agent-pilot-kit/issues/new?template=request.yml">Request the Pilot Kit</a></p>
+<p class="note">Verified, fetched offer: requests use public GitHub issues and require an existing GitHub account. Do not add personal contact details or secrets. Checkout and paid delivery are coming soon.</p>
+<footer>Source facts were checked on 9 November 2026. The pilot example is fictional and inferred. No pilot outcome is reported.</footer></main></body></html>
